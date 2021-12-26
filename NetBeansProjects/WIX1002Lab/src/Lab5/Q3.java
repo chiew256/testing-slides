@@ -35,5 +35,6 @@ public class Q3 {
             totalHour=0;//reset the totalHour for the next worker
 
             System.out.println("");//to proceed to a new line after each worker's work hours printed
+        }
     }
 }
