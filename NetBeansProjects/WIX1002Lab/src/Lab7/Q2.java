@@ -8,21 +8,20 @@ import java.util.Scanner;
 
 public class Q2 {
     public static void main(String[] args) {
-        try {
+         try {
             URL u = new URL("https://fsktm.um.edu.my/");
             URLConnection cnn = u.openConnection();
             InputStream stream = cnn.getInputStream();
             Scanner input = new Scanner(stream);
-
+            
             PrintWriter outputStream = new PrintWriter(new FileOutputStream("index.html"));
             while(input.hasNextLine()){
                 outputStream.println(input.nextLine());
             }
-
+            
             outputStream.close();
-
-        } catch(IOException e){
-            System.out.println("IO Error:" + e.getMessage());
-        }
+         } catch(IOException e){
+             System.out.println("IO Error: " + e.getMessage());
+         }
     }
 }
